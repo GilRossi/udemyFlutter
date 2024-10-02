@@ -9,9 +9,9 @@ class Resultado extends StatelessWidget {
   Resultado(this.pontuacao);
 
   String get fraseResultado {
-    if (pontuacao < 25) {
+    if (pontuacao < 15) {
       return 'Você é antisocial!';
-    } else if (pontuacao < 30) {
+    } else if (pontuacao < 25) {
       return 'Quase sociavél!';
     } else if (pontuacao < 35) {
       return 'Sociavél!';
