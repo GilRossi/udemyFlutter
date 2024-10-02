@@ -6,15 +6,18 @@ import 'package:flutter/material.dart';
 
 class Resultado extends StatelessWidget {
   final int pontuacao;
-  Resultado(this.pontuacao);
+
+  final void Function() quandoReiniciarQuestionario;
+
+  Resultado(this.pontuacao, this.quandoReiniciarQuestionario);
 
   String get fraseResultado {
     if (pontuacao < 25) {
       return 'Você é antisocial!';
     } else if (pontuacao < 30) {
-      return 'Quase sociavél!';
+      return 'Quase sociável!';
     } else if (pontuacao < 35) {
-      return 'Sociavél!';
+      return 'Sociável!';
     } else {
       return 'Você é empático(a)!';
     }
