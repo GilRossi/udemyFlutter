@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, annotate_overrides, avoid_print
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, anpontuacaote_overrides, avoid_print
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,52 +9,55 @@ main() => runApp(PerguntaApp());
 
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
+  var _pontuacaoTotal = 0;
 
   final _perguntas = const [
     {
       'pergunta': 'Qual a marca do seu carro?',
       'respostas': [
-        {'texto': 'Hyundai', 'nota': 7},
-        {'texto': 'Honda', 'nota': 5},
-        {'texto': 'Volkswagem', 'nota': 6},
-        {'texto': 'GM - Chevrolet', 'nota': 10},
+        {'texto': 'Hyundai', 'pontuacao': 7},
+        {'texto': 'Honda', 'pontuacao': 5},
+        {'texto': 'Volkswagem', 'pontuacao': 6},
+        {'texto': 'GM - Chevrolet', 'pontuacao': 10},
       ],
     },
     {
       'pergunta': 'Qual o modelo do seu carro?',
       'respostas': [
-        {'texto': 'Tucson', 'nota': 9},
-        {'texto': 'Fit', 'nota': 8},
-        {'texto': 'Fusca', 'nota': 7},
-        {'texto': 'C10', 'nota': 10},
+        {'texto': 'Tucson', 'pontuacao': 9},
+        {'texto': 'Fit', 'pontuacao': 8},
+        {'texto': 'Fusca', 'pontuacao': 7},
+        {'texto': 'C10', 'pontuacao': 10},
       ],
     },
     {
       'pergunta': 'Qual o ano do seu carro?',
       'respostas': [
-        {'texto': '1900 > 2000', 'nota': 7},
-        {'texto': '2000 > 2010', 'nota': 8},
-        {'texto': '2010 > 2020', 'nota': 9},
-        {'texto': '2020 >', 'nota': 10},
+        {'texto': '1900 > 2000', 'pontuacao': 7},
+        {'texto': '2000 > 2010', 'pontuacao': 8},
+        {'texto': '2010 > 2020', 'pontuacao': 9},
+        {'texto': '2020 >', 'pontuacao': 10},
       ],
     },
     {
       'pergunta': 'Qual a cor do seu carro:',
       'respostas': [
-        {'texto': 'Preto', 'nota': 10},
-        {'texto': 'Branco', 'nota': 9},
-        {'texto': 'Bege', 'nota': 8},
-        {'texto': 'Prata', 'nota': 7},
+        {'texto': 'Preto', 'pontuacao': 10},
+        {'texto': 'Branco', 'pontuacao': 9},
+        {'texto': 'Bege', 'pontuacao': 8},
+        {'texto': 'Prata', 'pontuacao': 7},
       ],
     }
   ];
 
-  void _responder() {
+  void _responder(int pontuacao) {
     if (temPerguntaSelecionada) {
       setState(() {
         _perguntaSelecionada++;
+        _pontuacaoTotal += pontuacao;
       });
     }
+    print(_pontuacaoTotal);
   }
 
   bool get temPerguntaSelecionada {
