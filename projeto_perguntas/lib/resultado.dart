@@ -37,7 +37,7 @@ class Resultado extends StatelessWidget {
           ),
         ),
         ElevatedButton(
-          child: Text('Reiniciar?'),
+          child: Text('Reiniciar'),
           onPressed: quandoReiniciarQuestionario,
         )
       ],
