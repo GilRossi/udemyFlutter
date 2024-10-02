@@ -13,39 +13,51 @@ class _PerguntaAppState extends State<PerguntaApp> {
 
   final _perguntas = const [
     {
-      'pergunta': 'Qual a marca do seu carro?',
+      'pergunta': 'Qual seu animal favorito?',
       'respostas': [
-        {'texto': 'Hyundai', 'pontuacao': 7},
-        {'texto': 'Honda', 'pontuacao': 5},
-        {'texto': 'Volkswagem', 'pontuacao': 6},
-        {'texto': 'GM - Chevrolet', 'pontuacao': 10},
+        {'texto': 'Cachorro', 'pontuacao': 10},
+        {'texto': 'Gato', 'pontuacao': 9},
+        {'texto': 'Cavalo', 'pontuacao': 8},
+        {'texto': 'Peixe', 'pontuacao': 7},
+        {'texto': 'Anfibios', 'pontuacao': 6},
+        {'texto': 'Pássaros', 'pontuacao': 5},
+        {'texto': 'Roedores', 'pontuacao': 1},
       ],
     },
     {
-      'pergunta': 'Qual o modelo do seu carro?',
-      'respostas': [
-        {'texto': 'Tucson', 'pontuacao': 9},
-        {'texto': 'Fit', 'pontuacao': 8},
-        {'texto': 'Fusca', 'pontuacao': 7},
-        {'texto': 'C10', 'pontuacao': 10},
-      ],
-    },
-    {
-      'pergunta': 'Qual o ano do seu carro?',
-      'respostas': [
-        {'texto': '1900 > 2000', 'pontuacao': 7},
-        {'texto': '2000 > 2010', 'pontuacao': 8},
-        {'texto': '2010 > 2020', 'pontuacao': 9},
-        {'texto': '2020 >', 'pontuacao': 10},
-      ],
-    },
-    {
-      'pergunta': 'Qual a cor do seu carro:',
+      'pergunta': 'Qual sua cor favorita?',
       'respostas': [
         {'texto': 'Preto', 'pontuacao': 10},
         {'texto': 'Branco', 'pontuacao': 9},
-        {'texto': 'Bege', 'pontuacao': 8},
-        {'texto': 'Prata', 'pontuacao': 7},
+        {'texto': 'Roxo', 'pontuacao': 8},
+        {'texto': 'Azul', 'pontuacao': 7},
+        {'texto': 'Vermelho', 'pontuacao': 6},
+        {'texto': 'Rosa', 'pontuacao': 5},
+        {'texto': 'Verde', 'pontuacao': 1},
+      ],
+    },
+    {
+      'pergunta': 'Qual a sua comida favorita?',
+      'respostas': [
+        {'texto': 'Strogonoff', 'pontuacao': 10},
+        {'texto': 'Lasanha', 'pontuacao': 9},
+        {'texto': 'Macarrão', 'pontuacao': 8},
+        {'texto': 'Churrasco', 'pontuacao': 7},
+        {'texto': 'Japonesa', 'pontuacao': 6},
+        {'texto': 'Pizza', 'pontuacao': 5},
+        {'texto': 'Vegana / Vegetariana', 'pontuacao': 1},
+      ],
+    },
+    {
+      'pergunta': 'Qual seu estilo de filme favorito?',
+      'respostas': [
+        {'texto': 'Guerra', 'pontuacao': 10},
+        {'texto': 'Ação e Aventura', 'pontuacao': 9},
+        {'texto': 'Comédia/Comédia Romatica', 'pontuacao': 8},
+        {'texto': 'Terror/Suspense', 'pontuacao': 7},
+        {'texto': 'Ficção Científica', 'pontuacao': 6},
+        {'texto': 'Documentário', 'pontuacao': 5},
+        {'texto': 'Novelas', 'pontuacao': 1},
       ],
     }
   ];
@@ -76,7 +88,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 perguntaSelecionada: _perguntaSelecionada,
                 quandoReponder: _responder,
               )
-            : Resultado(),
+            : Resultado(_pontuacaoTotal),
       ),
     );
   }
