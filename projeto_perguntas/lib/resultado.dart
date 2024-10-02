@@ -6,27 +6,44 @@ import 'package:flutter/material.dart';
 
 class Resultado extends StatelessWidget {
   final int pontuacao;
-  Resultado(this.pontuacao);
+
+  final void Function() quandoReiniciarQuestionario;
+
+  Resultado(this.pontuacao, this.quandoReiniciarQuestionario);
 
   String get fraseResultado {
     if (pontuacao < 15) {
       return 'Você é antisocial!';
+<<<<<<< HEAD
     } else if (pontuacao < 25) {
       return 'Quase sociavél!';
+=======
+    } else if (pontuacao < 30) {
+      return 'Quase sociável!';
+>>>>>>> dev
     } else if (pontuacao < 35) {
-      return 'Sociavél!';
+      return 'Sociável!';
     } else {
-      return 'Você é empático(a)!';
+      return 'Você é simpático(a)!';
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        fraseResultado,
-        style: TextStyle(fontSize: 28),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Text(
+            fraseResultado,
+            style: TextStyle(fontSize: 28),
+          ),
+        ),
+        ElevatedButton(
+          child: Text('Reiniciar?'),
+          onPressed: quandoReiniciarQuestionario,
+        )
+      ],
     );
   }
 }
