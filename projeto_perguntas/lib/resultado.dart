@@ -19,17 +19,26 @@ class Resultado extends StatelessWidget {
     } else if (pontuacao < 35) {
       return 'Sociável!';
     } else {
-      return 'Você é empático(a)!';
+      return 'Você é simpático(a)!';
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        fraseResultado,
-        style: TextStyle(fontSize: 28),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Text(
+            fraseResultado,
+            style: TextStyle(fontSize: 28),
+          ),
+        ),
+        ElevatedButton(
+          child: Text('Reiniciar?'),
+          onPressed: quandoReiniciarQuestionario,
+        )
+      ],
     );
   }
 }
