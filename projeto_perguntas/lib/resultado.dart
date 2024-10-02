@@ -14,13 +14,10 @@ class Resultado extends StatelessWidget {
   String get fraseResultado {
     if (pontuacao < 15) {
       return 'Você é antisocial!';
-<<<<<<< HEAD
     } else if (pontuacao < 25) {
       return 'Quase sociavél!';
-=======
     } else if (pontuacao < 30) {
       return 'Quase sociável!';
->>>>>>> dev
     } else if (pontuacao < 35) {
       return 'Sociável!';
     } else {
